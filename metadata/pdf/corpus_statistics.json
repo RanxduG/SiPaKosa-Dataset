@@ -1,0 +1,25 @@
+{
+  "total_books": 16,
+  "total_pages": 7064,
+  "language_distribution": {
+    "sinhala": {
+      "pages": 1385,
+      "chars": 2345446
+    },
+    "pali": {
+      "pages": 0,
+      "chars": 0
+    },
+    "mixed": {
+      "pages": 5679,
+      "chars": 9624748
+    }
+  },
+  "category_distribution": {
+    "books-related-to-the-tipitaka": 5,
+    "buddhist-characters": 3,
+    "old-books": 8
+  },
+  "avg_pages_per_book": 441.5,
+  "avg_chars_per_page": 1694.5348244620611
+}

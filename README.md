@@ -6,12 +6,10 @@ A comprehensive corpus of canonical and classical Buddhist texts in Sinhala and 
 
 ## 📊 Dataset Statistics
 
-- **Total Sentences**: 786,839
+- **Total Sentences**: 786,344
 - **Sinhala Sentences**: 465,539 (59.2%)
 - **Mixed Sinhala-Pali**: 320,805 (40.8%)
-- **Pali Sentences**: 495 (0.1%)
 - **Sources**: 16 historical books + 5 Nikayas (Tripitaka)
-- **Time Period**: Late 19th - mid 20th century
 
 ## 📁 Dataset Structure
 ```

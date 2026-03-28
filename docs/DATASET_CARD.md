@@ -58,9 +58,7 @@ Metadata files contain:
 |-------|---------|------------|--------|
 | Sinhala | 80% | 10% | 10% |
 | Mixed   | 80% | 10% | 10% |
-| Pali    | 100% | - | - |
 
-Splitting was performed at book level to prevent data leakage.
 
 ## Dataset Creation
 
@@ -68,7 +66,6 @@ Splitting was performed at book level to prevent data leakage.
 
 #### Historical Archives
 - **Source**: IFBCnet Library (Internet Archive)
-- **Period**: Late 19th - mid 20th century
 - **Copyright**: Public domain (70-year rule)
 - **Processing**: OCR with Google Document AI (99.8% retention)
 

@@ -1,3 +1,30 @@
+---
+license: mit
+task_categories:
+  - text-generation
+  - text-classification
+language:
+  - si
+pretty_name: SiPaKosa
+size_categories:
+  - 100K<n<1M
+configs:
+  - config_name: sinhala
+    data_files:
+      - split: train
+        path: data/sinhala/train.txt
+      - split: validation
+        path: data/sinhala/validation.txt
+      - split: test
+        path: data/sinhala/test.txt
+  - config_name: mixed
+    data_files:
+      - split: train
+        path: data/mixed/train.txt
+      - split: test
+        path: data/mixed/test.txt
+---
+
 # SiPaKosa: Sinhala-Pali Buddhist Corpus
 
 **[ANONYMOUS SUBMISSION - Under Review]**

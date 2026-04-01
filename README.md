@@ -21,6 +21,8 @@ configs:
     data_files:
       - split: train
         path: data/mixed/train.txt
+      - split: validation
+        path: data/mixed/validation.txt
       - split: test
         path: data/mixed/test.txt
 ---

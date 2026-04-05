@@ -31,21 +31,21 @@ configs:
 
 A comprehensive corpus of canonical and classical Buddhist texts in Sinhala and Pali, compiled from historical archives and web-scraped canonical scriptures.
 
-## 📊 Dataset Statistics
+## Dataset Statistics
 
 - **Total Sentences**: 786,344
 - **Sinhala Sentences**: 465,539 (59.2%)
 - **Mixed Sinhala-Pali**: 320,805 (40.8%)
 - **Sources**: 16 historical books + 5 Nikayas (Tripitaka)
 
-## 📁 Dataset Structure
+## Dataset Structure
 ```
 data/
 ├── sinhala/          # Pure Sinhala corpus
 └── mixed/             # Language Mix Sinhala-Pali
 ```
 
-## 🚀 Quick Start
+## Quick Start
 ```python
 # Load the dataset
 from datasets import load_dataset

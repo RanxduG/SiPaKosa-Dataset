@@ -51,13 +51,15 @@ data/
 ## 🚀 Quick Start
 ```python
 # Load the dataset
-from scripts.load_dataset import load_sipakosa
+from datasets import load_dataset
 
 # Load Sinhala training set
-train_data = load_sipakosa('data/sinhala/train.txt')
+train_ds = load_dataset("RaniduG/SiPaKosa", "mixed")
+print(train_ds["train"][0])
 
-# Load mixed corpus
-mixed_data = load_sipakosa('data/mixed/train.txt')
+# Load mixed training set
+mixed_ds = load_dataset("RaniduG/SiPaKosa", "mixed")
+print(mixed_ds["train"][0])
 ```
 
 ## 📖 Documentation

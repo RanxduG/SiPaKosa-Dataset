@@ -45,6 +45,28 @@ data/
 └── mixed/             # Language Mix Sinhala-Pali
 ```
 
+## Metadata Structure
+
+The `metadata/` folder contains two sub-folders: `pdf/` and `tripitaka/`.
+
+### `metadata/pdf/`
+
+Holds statistics and manifest data for the 16 digitised Buddhist books in the PDF corpus.
+
+- `corpus_manifest.json` — lists each book with its name (Sinhala and English), category, and file paths.
+- `corpus_statistics.json` — high-level summary: total books (16), total pages (7,064), language split (Sinhala vs. mixed), and category distribution.
+- `detailed_corpus_statistics.json` — per-book and per-category breakdown including word counts, character counts, and averages per page. Covers three categories: `books-related-to-the-tipitaka`, `old-books`, and `buddhist-characters`.
+
+### `metadata/tripitaka/`
+
+Contains scraped sutta data from [tripitaka.online](https://tripitaka.online), organised by nikāya (collection). Each nikāya has its own sub-folder (e.g., `digha/`, `majjhima/`, `anguttara/`).
+
+Inside each sub-folder:
+
+- `suttas_batch_{number}.json` — batched sutta records. Each entry contains the URL, title, Sinhala content, Pali content, word counts, nikāya info, scraping method, and timestamp.
+- `error_log.json` — records any suttas that failed to scrape (e.g., pages with no Sinhala or Pali content found).
+- `scraping_progress.json` — tracks how many suttas were scraped vs. errored, along with start time and last update timestamp.
+
 ## Quick Start
 ```python
 # Load the dataset

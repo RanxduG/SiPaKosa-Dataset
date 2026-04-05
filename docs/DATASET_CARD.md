@@ -147,11 +147,12 @@ This dataset preserves Sinhala Buddhist cultural heritage and enables:
 ## Additional Information
 
 ### Dataset Curators
-[Anonymous for review]
+Ranidu Gurusinghe
+Nevidu Jayatilleke
+
 
 ### Licensing Information
 - **Corpus**: MIT License
-- **Code**: MIT License
 
 ### Citation Information
 ```bibtex
@@ -165,6 +166,3 @@ This dataset preserves Sinhala Buddhist cultural heritage and enables:
       url={https://arxiv.org/abs/2603.29221}, 
 }
 ```
-
-### Contributions
-[Will be added after review]

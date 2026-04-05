@@ -94,12 +94,6 @@ This dataset preserves Sinhala Buddhist cultural heritage and enables:
 - Educational applications
 - Low-resource NLP advancement
 
-### Discussion of Biases
-
-- **Temporal bias**: Excludes post-1950s scholarship due to copyright
-- **Genre bias**: Focus on religious/philosophical texts
-- **Geographic bias**: Sri Lankan Theravada Buddhist tradition
-
 ### Other Known Limitations
 
 - OCR errors in degraded historical documents
@@ -119,11 +113,14 @@ This dataset preserves Sinhala Buddhist cultural heritage and enables:
 
 ### Citation Information
 ```bibtex
-@inproceedings{anonymous2025sipakosa,
-  title={SiPaKosa: A Comprehensive Corpus of Canonical and Classical Buddhist Texts in Sinhala and Pali},
-  author={Anonymous},
-  booktitle={Anonymous Submission},
-  year={2025}
+@misc{gurusinghe2026sipakosacomprehensivecorpuscanonical,
+      title={SiPaKosa: A Comprehensive Corpus of Canonical and Classical Buddhist Texts in Sinhala and Pali}, 
+      author={Ranidu Gurusinghe and Nevidu Jayatilleke},
+      year={2026},
+      eprint={2603.29221},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2603.29221}, 
 }
 ```
 

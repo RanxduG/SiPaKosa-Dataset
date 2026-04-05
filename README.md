@@ -29,8 +29,6 @@ configs:
 
 # SiPaKosa: Sinhala-Pali Buddhist Corpus
 
-**[ANONYMOUS SUBMISSION - Under Review]**
-
 A comprehensive corpus of canonical and classical Buddhist texts in Sinhala and Pali, compiled from historical archives and web-scraped canonical scriptures.
 
 ## 📊 Dataset Statistics
@@ -44,8 +42,7 @@ A comprehensive corpus of canonical and classical Buddhist texts in Sinhala and 
 ```
 data/
 ├── sinhala/          # Pure Sinhala corpus
-├── mixed/            # Language Mix Sinhala-Pali
-└── pali/             # Pure Pali corpus
+└── mixed/             # Language Mix Sinhala-Pali
 ```
 
 ## 🚀 Quick Start
@@ -62,20 +59,15 @@ mixed_ds = load_dataset("RaniduG/SiPaKosa", "mixed")
 print(mixed_ds["train"][0])
 ```
 
-## 📖 Documentation
+## Documentation
 
 - [Dataset Card](docs/DATASET_CARD.md) - Detailed documentation
-- [Evaluation Guide](docs/EVALUATION.md) - Reproduce baseline results
 - [Citation](docs/CITATION.bib) - How to cite this work
 
-## 📜 License
+## License
 
 This dataset is released under MIT for research purposes.
 
-## 🔗 Paper
+## Paper
 
-**[Anonymous Submission - Link will be added after review]**
-
-## ⚠️ Note
-
-This repository is anonymized for double-blind review. Author information and institutional affiliations have been removed.
+**https://arxiv.org/abs/2603.29221**

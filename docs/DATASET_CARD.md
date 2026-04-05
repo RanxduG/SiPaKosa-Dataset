@@ -1,21 +1,18 @@
 # SiPaKosa Dataset Card
 
 ## Dataset Description
-
-- **Homepage**: [Will be added after review]
-- **Repository**: [This anonymous repository]
-- **Paper**: [Anonymous submission under review]
-- **Point of Contact**: [Will be added after review]
+- **Repository**: https://github.com/RanxduG/SiPaKosa-Dataset
+- **Paper**: https://arxiv.org/abs/2603.29221
+- **Point of Contact**: ranidu.20222198@iit.ac.lk
 
 ## Dataset Summary
 
-SiPaKosa is a large-scale corpus of Sinhala Buddhist literature comprising 786,839 sentences from two complementary sources:
+SiPaKosa is a large-scale corpus of Sinhala Buddhist literature comprising 786,344 sentences from two complementary sources:
 
-1. **Historical Archives**: 16 copyright-cleared books (247,513 sentences)
-2. **Web-scraped Canonical Texts**: Complete Tripitaka Sutta Pitaka (539,326 sentences)
+1. **Historical Archives**: 16 copyright-cleared books
+2. **Web-scraped Canonical Texts**: Complete Tripitaka Sutta Pitaka (5 Nikayas)
 
 ## Supported Tasks
-
 - Language Modeling
 - Text Classification
 - Information Retrieval
@@ -24,9 +21,8 @@ SiPaKosa is a large-scale corpus of Sinhala Buddhist literature comprising 786,8
 - Code-switching Analysis
 
 ## Languages
-
-- Sinhala (sin)
-- Pali (pli)
+- Sinhala (`si`)
+- Pali (`pli`)
 - Mixed Sinhala-Pali (code-switched)
 
 ## Dataset Structure
@@ -48,31 +44,79 @@ Example from `mixed/train.txt`:
 Each `.txt` file contains one sentence per line in UTF-8 encoding.
 
 Metadata files contain:
-- `book_metadata.csv`: Book-level information
-- `page_metadata.csv`: Page-level OCR confidence and language classification
-- `corpus_manifest.json`: Complete corpus provenance
+- `corpus_manifest.json`: Complete corpus provenance (book names, categories, file paths)
+- `corpus_statistics.json`: High-level summary of pages, language split, and category distribution
+- `detailed_corpus_statistics.json`: Per-book and per-category breakdown with word and character counts
 
 ### Data Splits
 
-|       | Train   | Validation | Test   |
-|-------|---------|------------|--------|
-| Sinhala | 80% | 10% | 10% |
-| Mixed   | 80% | 10% | 10% |
+|         | Train | Validation | Test |
+|---------|-------|------------|------|
+| Sinhala | 80%   | 10%        | 10%  |
+| Mixed   | 80%   | 10%        | 10%  |
 
+### Configs
+```python
+# Load Sinhala config
+from datasets import load_dataset
+ds = load_dataset("RaniduG/SiPaKosa", "sinhala")
+
+# Load Mixed config
+ds = load_dataset("RaniduG/SiPaKosa", "mixed")
+```
+
+### Corpus Statistics
+
+| Split | Sentences | Percentage |
+|-------|-----------|------------|
+| Sinhala | 465,539 | 59.2% |
+| Mixed Sinhala-Pali | 320,805 | 40.8% |
+| **Total** | **786,344** | **100%** |
+
+### File Structure
+```
+data/
+├── sinhala/
+│   ├── train.txt
+│   ├── validation.txt
+│   └── test.txt
+└── mixed/
+├── train.txt
+├── validation.txt
+└── test.txt
+metadata/
+├── pdf/
+│   ├── corpus_manifest.json
+│   ├── corpus_statistics.json
+│   └── detailed_corpus_statistics.json
+└── tripitaka/
+├── digha/
+│   ├── suttas_batch_0001.json
+│   ├── error_log.json
+│   └── scraping_progress.json
+├── majjhima/
+├── anguttara/
+├── samyutta/
+└── khuddaka/
+```
 
 ## Dataset Creation
 
 ### Source Data
 
-#### Historical Archives
+#### Historical Archives (PDF)
 - **Source**: IFBCnet Library (Internet Archive)
+- **Coverage**: 16 digitised Buddhist books
 - **Copyright**: Public domain (70-year rule)
 - **Processing**: OCR with Google Document AI (99.8% retention)
+- **Categories**: Books related to the Tipitaka, Old Books, Buddhist Characters
+- **Total Pages**: 7,064
 
-#### Canonical Texts
-- **Source**: tripitaka.online
-- **Coverage**: 5 Nikayas of Sutta Pitaka
+#### Canonical Texts (Tripitaka)
+- **Source**: [tripitaka.online](https://tripitaka.online)
+- **Coverage**: 5 Nikayas of the Sutta Pitaka (Digha, Majjhima, Samyutta, Anguttara, Khuddaka)
 - **Processing**: Web scraping with structural metadata preservation
+- **Format**: Each sutta stored with URL, title, Sinhala content, Pali content, word counts, nikāya info, and timestamp
 
 ### Annotations
 
@@ -90,25 +134,23 @@ This dataset contains religious and philosophical texts from public domain sourc
 ### Social Impact
 
 This dataset preserves Sinhala Buddhist cultural heritage and enables:
-- Digital humanities research
-- Educational applications
-- Low-resource NLP advancement
+- Digital humanities research on canonical Buddhist literature
+- Educational applications for Sinhala and Pali language learning
+- Low-resource NLP advancement for the Sinhala language
 
 ### Other Known Limitations
-
-- OCR errors in degraded historical documents
-- Variable orthographic standards across centuries
-- Code-switching complexity in mixed texts
+- OCR errors may be present in degraded historical documents
+- Variable orthographic standards across centuries in historical texts
+- Code-switching complexity in mixed Sinhala-Pali texts
+- Some suttas may have been skipped during scraping where no Sinhala or Pali content was found (logged in `error_log.json`)
 
 ## Additional Information
 
 ### Dataset Curators
-
 [Anonymous for review]
 
 ### Licensing Information
-
-- **Corpus**: CC-BY-4.0
+- **Corpus**: MIT License
 - **Code**: MIT License
 
 ### Citation Information
@@ -125,5 +167,4 @@ This dataset preserves Sinhala Buddhist cultural heritage and enables:
 ```
 
 ### Contributions
-
 [Will be added after review]

@@ -136,6 +136,11 @@ book_df = df[df["book_name_si"] == "විශුද්ධිමාර්ගය"]
 
 This dataset is released under MIT for research purposes.
 
+## Hugging Face
+You can find the book level dataset at: https://huggingface.co/datasets/RaniduG/SiPaKosa
+
+And you can find the sentence level dataset at: https://huggingface.co/datasets/RaniduG/SiPaKosa-Sent
+
 ## Paper
 
 **https://arxiv.org/abs/2603.29221**
